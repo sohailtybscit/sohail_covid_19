@@ -98,20 +98,17 @@ export const fetchCountriesData = async (country) => {
   }
 };
 
-// export const fetchIndianData = async () => {
-//   try {
-//     const response = await axios.get(
-//       "https://api.covid19india.org/state_district_wise.json"
-//     );
-//     console.log(response.data);
-//     const state = await Object.keys(response.data);
-//     await console.log(state);
-//     const district = await Object.keys(response.data.Kerala.districtData);
-//     await console.log(district);
-//     await console.log(response.data.Kerala.districtData.Thirssur);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-// fetchIndianData();
+export const fetchIndianData = async () => {
+  try {
+    const response = await axios.get(
+      "https://api.covid19india.org/state_district_wise.json"
+    );
+    const data = response.data;
+    console.log(data);
+    // console.log(response.data.Assam.districtData.Cachar.active);
+    return data;
+    //we need data.{statename}.districtData.{districtname}.active/confirmed/deceased
+  } catch (error) {
+    console.log(error);
+  }
+};

@@ -11,8 +11,11 @@ class App extends React.Component {
     return (
       <Router>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Layout1 />
+          </Route>
+          <Route path="/india">
+            <Layout2 />
           </Route>
         </Switch>
       </Router>

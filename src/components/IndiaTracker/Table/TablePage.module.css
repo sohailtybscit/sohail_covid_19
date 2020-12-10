@@ -1,0 +1,15 @@
+.tableHeading {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.columnHeading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+@media only screen and (max-width: 600px) {
+  .columnHeading {
+    font-size: 0.7rem;
+  }
+}
